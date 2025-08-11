@@ -32,6 +32,31 @@ Predicted Class: setosa
 
 A decision tree is like a flowchart that helps a computer make decisions by asking a series of questions. Imagine you're trying to decide whether to go outside: the tree might first ask, “Is it raining?” If yes, then “Do you have an umbrella?”—and so on. In machine learning, it works the same way: it splits data into branches based on features (like age, income, etc.) and keeps asking questions until it reaches a final decision, like “yes” or “no.” It’s easy to understand, kind of like playing 20 Questions, and great for both simple and complex decision-making tasks.
 
+#Output:
+
+First 5 rows of dataset:
+   survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  alone
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no  False
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes  False
+...
+
+Accuracy: 0.79
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.80      0.86      0.83       105
+           1       0.77      0.68      0.72        74
+
+    accuracy                           0.79       179
+   macro avg       0.78      0.77      0.78       179
+weighted avg       0.79      0.79      0.79       179
+
+
+Sample Passenger Prediction: Did Not Survive
+
+
+
 3_knn.py
 
 The K-Nearest Neighbors (KNN) algorithm is like asking your closest friends for advice. When you want to predict something—say, whether someone likes a movie—KNN looks at the “k” most similar people (neighbors) based on things like age, interests, or ratings. If most of them liked the movie, it assumes you probably will too. It doesn’t do any fancy calculations ahead of time; it just compares new data to existing examples and goes with the majority vote. Simple, intuitive, and surprisingly effective—just like good old peer pressure!
