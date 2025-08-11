@@ -57,34 +57,3 @@ print("Actual Digit:", y_test[sample_index])
 
 
 
-#Output:
-
-Dataset Shape: (1797, 64)
-Target Classes: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
-First Image Label: 0
-First Image Data (flattened):
- [0. 0. 5. ... 0. 0. 0.]
-
-Model Accuracy: 0.99
-
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00        36
-           1       0.97      1.00      0.99        37
-           2       1.00      1.00      1.00        40
-           3       1.00      0.97      0.99        39
-           4       1.00      1.00      1.00        41
-           5       1.00      1.00      1.00        42
-           6       1.00      1.00      1.00        36
-           7       0.97      1.00      0.99        39
-           8       1.00      0.97      0.99        38
-           9       1.00      1.00      1.00        31
-
-    accuracy                           0.99       379
-   macro avg       0.99      0.99      0.99       379
-weighted avg       0.99      0.99      0.99       379
-
-Sample Input Index: 0
-Predicted Digit: 6
-Actual Digit: 6
