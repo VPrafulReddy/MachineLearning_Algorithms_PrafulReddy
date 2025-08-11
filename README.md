@@ -61,10 +61,100 @@ Sample Passenger Prediction: Did Not Survive
 
 The K-Nearest Neighbors (KNN) algorithm is like asking your closest friends for advice. When you want to predict something—say, whether someone likes a movie—KNN looks at the “k” most similar people (neighbors) based on things like age, interests, or ratings. If most of them liked the movie, it assumes you probably will too. It doesn’t do any fancy calculations ahead of time; it just compares new data to existing examples and goes with the majority vote. Simple, intuitive, and surprisingly effective—just like good old peer pressure!
 
+#Output:
+
+Dataset Shape: (1797, 64)
+Target Classes: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+First Image Label: 0
+First Image Data (flattened):
+ [0. 0. 5. ... 0. 0. 0.]
+
+Model Accuracy: 0.99
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00        36
+           1       0.97      1.00      0.99        37
+           2       1.00      1.00      1.00        40
+           3       1.00      0.97      0.99        39
+           4       1.00      1.00      1.00        41
+           5       1.00      1.00      1.00        42
+           6       1.00      1.00      1.00        36
+           7       0.97      1.00      0.99        39
+           8       1.00      0.97      0.99        38
+           9       1.00      1.00      1.00        31
+
+    accuracy                           0.99       379
+   macro avg       0.99      0.99      0.99       379
+weighted avg       0.99      0.99      0.99       379
+
+Sample Input Index: 0
+Predicted Digit: 6
+Actual Digit: 6
+
+
+
 4_svm.py
 
 Support Vector Machine (SVM) is like drawing the perfect line to separate two groups of things. Imagine you have a bunch of red and blue dots scattered on a paper, and you want to split them with a straight line so that all reds are on one side and blues on the other. SVM finds the **best possible line** (or even a curve, if needed) that not only separates the groups but also keeps the widest possible gap between them—like giving each team their own space. It’s great for classification tasks and works well even when the data isn’t perfectly clean or simple. Think of it as a super picky referee making sure both sides stay in their lanes.
 
+#Output
+First 5 rows of dataset:
+   mean radius  mean texture  mean perimeter  ...  worst fractal dimension  target
+0       17.99         10.38          122.80  ...                   0.11890       0
+1       20.57         17.77          132.90  ...                   0.08902       0
+2       19.69         21.25          130.00  ...                   0.08758       0
+3       11.42         20.38           77.58  ...                   0.17300       0
+4       20.29         14.34          135.10  ...                   0.07678       0
+
+Model Accuracy: 0.97
+
+Classification Report:
+              precision    recall  f1-score   support
+
+
 5_random_forest.py
 
 Random Forest is like asking a bunch of experts for their opinion and then going with the majority vote. Instead of relying on one decision tree (which might be biased or overconfident), it builds **many trees**, each trained on slightly different slices of the data. When it’s time to make a prediction—like whether someone will default on a loan—each tree gives its answer, and the forest picks the most common one. This teamwork makes Random Forest more accurate and reliable, kind of like crowd wisdom: one tree might make a mistake, but a whole forest? Much harder to fool.
+
+
+#Output:
+First 5 rows of dataset:
+   alcohol  malic_acid   ash  alcalinity_of_ash  magnesium  total_phenols  ...  od280/od315_of_diluted_wines  proline  target
+0    14.23        1.71  2.43              15.6       127           2.80  ...                           3.92     1065       0
+1    13.20        1.78  2.14              11.2       100           2.65  ...                           3.40     1050       0
+...
+
+Model Accuracy: 1.00
+
+Classification Report:
+              precision    recall  f1-score   support
+
+     class_0       1.00      1.00      1.00        14
+     class_1       1.00      1.00      1.00        14
+     class_2       1.00      1.00      1.00         8
+
+    accuracy                           1.00        36
+   macro avg       1.00      1.00      1.00        36
+weighted avg       1.00      1.00      1.00        36
+
+Sample Input (first test sample):
+alcohol                              13.05
+malic_acid                            1.77
+ash                                   2.10
+alcalinity_of_ash                    17.0
+magnesium                           107.0
+total_phenols                         3.00
+flavanoids                            3.00
+nonflavanoid_phenols                  0.28
+proanthocyanins                       2.03
+color_intensity                       5.04
+hue                                   0.88
+od280/od315_of_diluted_wines          3.35
+proline                             885.0
+Name: 61, dtype: float64
+Predicted Class: class_0
+Actual Class: class_0
+
+
