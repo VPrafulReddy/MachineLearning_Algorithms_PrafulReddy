@@ -58,19 +58,6 @@ print("Predicted Class:", cancer.target_names[sample_prediction[0]])
 print("Actual Class:", cancer.target_names[y_test.iloc[0]])
 
 
-#Output
-First 5 rows of dataset:
-   mean radius  mean texture  mean perimeter  ...  worst fractal dimension  target
-0       17.99         10.38          122.80  ...                   0.11890       0
-1       20.57         17.77          132.90  ...                   0.08902       0
-2       19.69         21.25          130.00  ...                   0.08758       0
-3       11.42         20.38           77.58  ...                   0.17300       0
-4       20.29         14.34          135.10  ...                   0.07678       0
-
-Model Accuracy: 0.97
-
-Classification Report:
-              precision    recall  f1-score   support
 
    malignant       0.96      0.96      0.96        42
       benign       0.98      0.98      0.98        72
@@ -87,3 +74,4 @@ mean area                   566.30
 ... (more features)
 Predicted Class: benign
 Actual Class: benign
+
