@@ -42,27 +42,3 @@ print("Predicted Class:", iris.target_names[sample_prediction[0]])
 
 
 
-
-
-#Output:
-
-Accuracy: 1.00
-
-Classification Report:
-              precision    recall  f1-score   support
-
-      setosa       1.00      1.00      1.00         9
-  versicolor       1.00      1.00      1.00        13
-   virginica       1.00      1.00      1.00         8
-
-    accuracy                           1.00        30
-   macro avg       1.00      1.00      1.00        30
-weighted avg       1.00      1.00      1.00        30
-
-Sample Input: [[5.1, 3.5, 1.4, 0.2]]
-Predicted Class: setosa
-
-
-#The accuracy might not always be 1.00 — it depends on the train-test split.
-
-#The prediction for the sample input [5.1, 3.5, 1.4, 0.2] will always be "setosa" because those measurements match that species closely.
