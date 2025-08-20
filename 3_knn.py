@@ -1,5 +1,5 @@
 # K-Nearest Neighbors (KNN) Classification on Digits Dataset
-# ----------------------------------------------------------
+
 
 # Step 1: Import necessary libraries
 import pandas as pd
@@ -54,6 +54,7 @@ sample_prediction = knn_model.predict(sample_data)
 print("\nSample Input Index:", sample_index)
 print("Predicted Digit:", sample_prediction[0])
 print("Actual Digit:", y_test[sample_index])
+
 
 
 
